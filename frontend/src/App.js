@@ -60,6 +60,8 @@ function App() {
   const generateObjects = () => {
     const apiEndpoint = `${BASE_API_URL}/api/v1/random/generate`;
     setIsLoading(true);
+    setItems([]);
+    setTask(null);
     fetch(apiEndpoint).then(res => res.json())
       .then(
         (result) => {
